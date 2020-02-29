@@ -82,8 +82,7 @@ Exercise 2A: Replace the `0` in the expression below with an
 expression that extracts the red channel of the color named Red,
 thereby naming the result `red_channel`.
 ......................................................................*)
-open Color;;
-let red_channel : int = Color.red (Color.color_named(Red))  ;;
+let red_channel : int =  Color.red (Color.color_named Color.Red) ;;
 
 (* Let's investigate one way that a signature can be useful. Although
 color.ml contains an implementation of a basic color module, the
@@ -102,20 +101,7 @@ want revealed to the user and which you would prefer to be hidden.
 Once you have color.mli implemented, you should still be able to
 compile color.ml and run color.byte.
 ......................................................................*)
-type color ;;
-type color_name =
-  | Red
-  | Green
-  | Blue
-  | Orange 
-  | Yellow 
-  | Indigo 
-  | Violet ;;
-  val to_color : int -> int -> int -> color ;;
-  val red : color -> int;;
-  val green: color -> int ;;
-  val blue: color -> int ;;
-  val color_named: color_name -> color ;;
+type color ;;    type color_name =      | Red      | Green      | Blue      | Orange      | Yellow      | Indigo      | Violet ;;    val to_color : int -> int -> int -> color ;;    val red : color -> int ;;    val green: color -> int ;;    val blue: color -> int ;;    val color_named: color_name -> color ;;
 
 (*......................................................................
 Exercise 2C:

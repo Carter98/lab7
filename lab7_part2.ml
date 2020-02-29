@@ -101,8 +101,6 @@ want revealed to the user and which you would prefer to be hidden.
 Once you have color.mli implemented, you should still be able to
 compile color.ml and run color.byte.
 ......................................................................*)
-
-
 (*......................................................................
 Exercise 2C:
 
